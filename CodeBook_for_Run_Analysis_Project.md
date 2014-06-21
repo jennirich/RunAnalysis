@@ -63,7 +63,7 @@ The original data had multiple observations (rows) for each subject for each typ
 
 meanSD1 <- aggregate(newDataM[,4], by=c(newDataM[3],newDataM[1],newDataM[2]), mean)
 
-This created a long dataset (11880 rows) that had a mean value for each type of measurement for each subject and activity. These were separated into different variables (types of measurements) using the cast function, to create a wide dataset that had a mean value (the data) for each type of measurement (one variable per column) for each subject for each type of activity (one row per observation of subject/activity combination). The final dataset has 68 columns (2 id, 66 variable) with 180 rows per column.
+This created a long dataset (11880 rows) that had a mean value for each type of measurement for each subject and activity. These were separated into different variables (types of measurements) using the cast function, to create a wide dataset that had a mean value (the data) for each type of measurement (one variable per column) for each subject for each type of activity (one row per observation of subject/activity combination). The final dataset has 68 columns (2 id, 66 variable) with 180 rows per column (30 subjects x 6 types of activity).
 
 The Means dataframe was written to a table using the write.table command in R; a version with a descriptive name, as well as one with a shorter name, was saved.
 
